@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <script src="dist/bundle.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <a-assets>
+
+        <img id="skyTexture" src="img/background.fw.png">
+        <img id="groundTexture" src="img/ground.fw.png">
+      </a-assets>
+
+      <a-sky src="#skyTexture"></a-sky>
+      <a-plane rotation="-90 0 0" width="30" height="30" src="#groundTexture"></a-plane>
+
+      <a-entity layout="type: line; margin: 1.2" position="-2 2 -4">
+        <a-box animation__mouseenter="property: scale; startEvents: mouseenter; from: 1 1 1; to: 1.1 1.1 1.1; dur: 150; easing: easeInSine;"
+        animation__mouseleave="property: scale; startEvents: mouseenter; from: 1.1 1.1 1.1; to: 1 1 1; dur: 150; easing: easeInSine;"
+        snare color="#FF6138" position="0 0 0">
+        </a-box>
+        <a-box animation__mouseenter="property: scale; startEvents: mouseenter; from: 1 1 1; to: 1.1 1.1 1.1; dur: 150; easing: easeInSine;"
+        animation__mouseleave="property: scale; startEvents: mouseenter; from: 1.1 1.1 1.1; to: 1 1 1; dur: 150; easing: easeInSine;"
+        floor-tom color="#FFFF9D" position="2 0 0">
+        </a-box>
+        <a-box animation__mouseenter="property: scale; startEvents: mouseenter; from: 1 1 1; to: 1.1 1.1 1.1; dur: 150; easing: easeInSine;"
+        animation__mouseleave="property: scale; startEvents: mouseenter; from: 1.1 1.1 1.1; to: 1 1 1; dur: 150; easing: easeInSine;"
+        high-hat color="#BEEB9F" position="4 0 0">
+        </a-box>
+        <a-box animation__mouseenter="property: scale; startEvents: mouseenter; from: 1 1 1; to: 1.1 1.1 1.1; dur: 150; easing: easeInSine;"
+        animation__mouseleave="property: scale; startEvents: mouseenter; from: 1.1 1.1 1.1; to: 1 1 1; dur: 150; easing: easeInSine;"
+        ride color="#79BD8F" position="6 0 0">
+        </a-box>
+      </a-entity>
+
+      <a-entity layout="type: line; margin: 1.2" position="-2 3.2 -4">
+        <a-box kick id="kick"
+        animation__mouseenter="property: scale; startEvents: mouseenter; from: 1 1 1; to: 1.1 1.1 1.1; dur: 150; easing: easeInSine;"
+        animation__mouseleave="property: scale; startEvents: mouseenter; from: 1.1 1.1 1.1; to: 1 1 1; dur: 150; easing: easeInSine;"
+        color="#04BFBF" position="0 0 0">
+        </a-box>
+        <a-box animation__mouseenter="property: scale; startEvents: mouseenter; from: 1 1 1; to: 1.1 1.1 1.1; dur: 150; easing: easeInSine;"
+        animation__mouseleave="property: scale; startEvents: mouseenter; from: 1.1 1.1 1.1; to: 1 1 1; dur: 150; easing: easeInSine;"
+        mid-tom color="#CAFCD8" position="2 0 0">
+        </a-box>
+        <a-box animation__mouseenter="property: scale; startEvents: mouseenter; from: 1 1 1; to: 1.1 1.1 1.1; dur: 150; easing: easeInSine;"
+        animation__mouseleave="property: scale; startEvents: mouseenter; from: 1.1 1.1 1.1; to: 1 1 1; dur: 150; easing: easeInSine;"
+        high-tom color="#F7E967" position="4 0 0">
+        </a-box>
+        <a-box animation__mouseenter="property: scale; startEvents: mouseenter; from: 1 1 1; to: 1.1 1.1 1.1; dur: 150; easing: easeInSine;"
+        animation__mouseleave="property: scale; startEvents: mouseenter; from: 1.1 1.1 1.1; to: 1 1 1; dur: 150; easing: easeInSine;"
+        crash color="#A9CF54" position="6 0 0">
+        </a-box>
+      </a-entity>
+
+      <a-camera wasd-controls look-controls>
+        <a-cursor></a-cursor>
+      </a-camera>
+
+    </a-scene>
+  </body>
+</html>
